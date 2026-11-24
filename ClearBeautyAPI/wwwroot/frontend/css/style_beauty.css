@@ -716,3 +716,468 @@ input[type="range"] {
         opacity: 0.6;
     }
 }
+
+/* ================================
+   СТРАНИЦА ЛИЧНОГО КАБИНЕТА
+================================ */
+
+.profile-logo {
+    text-decoration: none;
+    color: inherit;
+}
+
+.profile-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.profile-icon:hover {
+    color: #9076bc;
+}
+
+.active-profile {
+    color: #9076bc;
+}
+
+
+/* Общая область профиля */
+
+.profile-page {
+    max-width: 1450px;
+    margin: 30px auto;
+    padding: 0 35px;
+}
+
+.profile-page-heading {
+    margin-bottom: 25px;
+}
+
+.profile-page-heading h2 {
+    font-size: 25px;
+    font-weight: 500;
+    margin: 0 0 8px;
+    color: #302b48;
+}
+
+.profile-page-heading p {
+    margin: 0;
+    color: #88849a;
+    font-size: 13px;
+}
+
+
+/* Расположение бокового меню и контента */
+
+.profile-layout {
+    display: grid;
+    grid-template-columns: 245px minmax(0, 1fr);
+    gap: 22px;
+    align-items: start;
+}
+
+
+/* БОКОВОЕ МЕНЮ */
+
+.profile-sidebar {
+    background: white;
+    border: 1px solid #eae6f0;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.profile-user-mini {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eeeaf3;
+}
+
+.avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: #eee6f8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #876bb0;
+    font-size: 19px;
+}
+
+.profile-user-mini h3 {
+    margin: 0 0 5px;
+    font-size: 14px;
+}
+
+.profile-user-mini p {
+    margin: 0;
+    font-size: 10px;
+    color: #8e899e;
+}
+
+.profile-navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    padding: 18px 0;
+}
+
+.profile-nav-item {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    padding: 12px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #6f6a82;
+    font-size: 12px;
+    transition: 0.2s;
+}
+
+.profile-nav-item span {
+    font-size: 17px;
+}
+
+.profile-nav-item:hover,
+.profile-nav-item.active {
+    background: #f0eafb;
+    color: #8167aa;
+}
+
+.back-to-site {
+    display: block;
+    border-top: 1px solid #eeeaf3;
+    padding-top: 17px;
+    text-decoration: none;
+    color: #8b78b3;
+    font-size: 11px;
+}
+
+
+/* ОСНОВНОЙ КОНТЕНТ */
+
+.profile-content {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    min-width: 0;
+}
+
+.profile-card {
+    background: white;
+    border: 1px solid #eae6f0;
+    border-radius: 15px;
+    padding: 22px;
+}
+
+.profile-card-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.profile-card-heading h3 {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.edit-profile-button {
+    border: 1px solid #e2d8f0;
+    background: white;
+    color: #846ba9;
+    padding: 8px 15px;
+    border-radius: 9px;
+    font-size: 11px;
+}
+
+.edit-profile-button:hover {
+    background: #f3eefb;
+}
+
+
+/* ЛИЧНЫЕ ДАННЫЕ */
+
+.personal-info {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    margin-bottom: 23px;
+}
+
+.large-avatar {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #e7dcf5, #cdb9e9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 29px;
+    color: #755c9b;
+}
+
+.personal-info-text h2 {
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0 0 7px;
+}
+
+.personal-info-text p {
+    margin: 0;
+    font-size: 12px;
+    color: #89849a;
+}
+
+.profile-fields {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 13px;
+}
+
+.profile-field {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    background: #faf9fc;
+    padding: 13px;
+    border-radius: 10px;
+}
+
+.profile-field span {
+    color: #908a9f;
+    font-size: 10px;
+}
+
+.profile-field strong {
+    font-size: 12px;
+    font-weight: 500;
+    color: #39344c;
+}
+
+
+/* ЗАПИСЬ */
+
+.appointment-card {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    border: 1px solid #eee8f5;
+    background: #faf9fd;
+    border-radius: 12px;
+    padding: 15px;
+}
+
+.appointment-date {
+    width: 65px;
+    min-width: 65px;
+    height: 72px;
+    background: #eee7f8;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #8066a8;
+}
+
+.appointment-date span {
+    font-size: 10px;
+}
+
+.appointment-date strong {
+    font-size: 27px;
+    font-weight: 500;
+}
+
+.appointment-info {
+    flex: 1;
+}
+
+.appointment-info h4 {
+    margin: 0 0 8px;
+    font-size: 13px;
+}
+
+.appointment-info p {
+    margin: 0 0 5px;
+    color: #817b91;
+    font-size: 11px;
+}
+
+.appointment-status {
+    display: inline-block;
+    margin-top: 6px;
+    background: #e9f4ea;
+    color: #6c9a74;
+    padding: 6px 9px;
+    border-radius: 15px;
+    font-size: 9px;
+}
+
+.appointment-more {
+    background: #eee8f8;
+    border: none;
+    color: #8066a8;
+    border-radius: 9px;
+    padding: 10px 13px;
+    font-size: 10px;
+}
+
+
+/* ИЗБРАННЫЕ МАСТЕРА */
+
+.favorites-preview {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.favorite-master {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    background: #faf9fc;
+    border: 1px solid #eeeaf3;
+    border-radius: 11px;
+    padding: 10px;
+    min-width: 0;
+}
+
+.favorite-master img {
+    width: 58px;
+    height: 58px;
+    border-radius: 9px;
+    object-fit: cover;
+}
+
+.favorite-master div {
+    flex: 1;
+    min-width: 0;
+}
+
+.favorite-master h4 {
+    margin: 0 0 5px;
+    font-size: 11px;
+}
+
+.favorite-master p {
+    margin: 0 0 5px;
+    color: #888399;
+    font-size: 10px;
+}
+
+.favorite-master span {
+    color: #856eac;
+    font-size: 10px;
+}
+
+.favorite-heart {
+    background: transparent;
+    border: none;
+    color: #a38bc9;
+    font-size: 17px;
+}
+
+
+/* НАСТРОЙКИ */
+
+.settings-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.settings-list a {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    text-decoration: none;
+    color: #625d75;
+    font-size: 12px;
+    border-bottom: 1px solid #f0edf4;
+}
+
+.settings-list a:last-child {
+    border-bottom: none;
+}
+
+.settings-list a:hover {
+    color: #9175ba;
+}
+
+.text-link {
+    color: #8872b0;
+    text-decoration: none;
+    font-size: 11px;
+}
+
+
+/* АДАПТИВ ПРОФИЛЯ */
+
+@media (max-width: 900px) {
+    .profile-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-sidebar {
+        padding: 12px;
+    }
+
+    .profile-navigation {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .profile-nav-item {
+        flex: 1;
+        justify-content: center;
+    }
+
+    .back-to-site {
+        margin-top: 5px;
+    }
+
+    .favorites-preview {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .profile-page {
+        padding: 0 15px;
+        margin-top: 20px;
+    }
+
+    .profile-fields {
+        grid-template-columns: 1fr;
+    }
+
+    .appointment-card {
+        flex-wrap: wrap;
+    }
+
+    .appointment-more {
+        width: 100%;
+    }
+
+    .profile-card {
+        padding: 15px;
+    }
+
+    .profile-page-heading h2 {
+        font-size: 21px;
+    }
+
+    .profile-navigation {
+        flex-direction: column;
+    }
+
+    .profile-nav-item {
+        justify-content: flex-start;
+    }
+}
