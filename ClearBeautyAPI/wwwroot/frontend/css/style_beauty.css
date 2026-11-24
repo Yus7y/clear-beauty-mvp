@@ -1201,3 +1201,219 @@ input[type="range"] {
 .layout:has(#catCosmetology:checked) .master-card:not([data-category~="cosmetology"]),
 .layout:has(#catMakeup:checked) .master-card:not([data-category~="makeup"]),
 .layout:has(#catMassage:checked) .master-card:not([data-category~="massage"]) { display:none; }
+
+
+/* =========================
+   FAVORITES PAGE
+========================= */
+
+.favorites-page {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 40px 60px 70px;
+    box-sizing: border-box;
+}
+
+.favorites-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 30px;
+    margin-bottom: 35px;
+}
+
+.favorites-subtitle {
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: #a28ac7;
+    margin-bottom: 12px;
+}
+
+.favorites-heading h1 {
+    font-size: 36px;
+    font-weight: 600;
+    color: #29252f;
+    margin: 0 0 12px;
+}
+
+.favorites-description {
+    color: #85808d;
+    font-size: 15px;
+    margin: 0;
+}
+
+.back-to-catalog {
+    text-decoration: none;
+    color: #8c72b5;
+    border: 1px solid #d9c9ed;
+    border-radius: 12px;
+    padding: 12px 20px;
+    font-size: 14px;
+    transition: 0.2s;
+    white-space: nowrap;
+}
+
+.back-to-catalog:hover {
+    background: #f2ebfa;
+}
+
+/* Сетка карточек */
+
+.favorites-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+/* Карточка мастера */
+
+.favorite-card {
+    background: #ffffff;
+    border: 1px solid #eee8f3;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: 0.25s;
+}
+
+.favorite-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(155, 125, 183, 0.12);
+}
+
+/* Фото */
+
+.favorite-image {
+    position: relative;
+    width: 100%;
+    height: 270px;
+    overflow: hidden;
+    background: #f2edf6;
+}
+
+.favorite-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Сердечко */
+
+.favorite-heart {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.92);
+    color: #c47da9;
+    font-size: 23px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+}
+
+.favorite-heart:hover {
+    background: #c47da9;
+    color: white;
+}
+
+/* Информация */
+
+.favorite-card-info {
+    padding: 20px;
+}
+
+.favorite-name-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.favorite-name-row h2 {
+    font-size: 18px;
+    color: #302b36;
+    font-weight: 600;
+    margin: 0;
+}
+
+.favorite-rating {
+    font-size: 14px;
+    color: #b18b55;
+    white-space: nowrap;
+}
+
+.favorite-specialization {
+    font-size: 14px;
+    color: #8c8694;
+    margin: 12px 0;
+}
+
+.favorite-price {
+    font-size: 16px;
+    font-weight: 600;
+    color: #5c496e;
+    margin: 15px 0;
+}
+
+/* Кнопка подробнее */
+
+.favorite-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    border-radius: 12px;
+    text-decoration: none;
+    background: #eee6f7;
+    color: #8062a5;
+    font-size: 14px;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+.favorite-details:hover {
+    background: #dcd0ed;
+}
+
+/* Адаптивность */
+
+@media (max-width: 1000px) {
+    .favorites-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .favorites-page {
+        padding: 35px 30px;
+    }
+}
+
+@media (max-width: 650px) {
+    .favorites-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .favorites-heading {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .favorites-heading h1 {
+        font-size: 28px;
+    }
+
+    .favorites-page {
+        padding: 25px 16px;
+    }
+
+    .favorite-image {
+        height: 250px;
+    }
+}
