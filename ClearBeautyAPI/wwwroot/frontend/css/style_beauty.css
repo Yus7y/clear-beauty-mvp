@@ -1181,3 +1181,23 @@ input[type="range"] {
         justify-content: flex-start;
     }
 }
+
+/* ================= CSS-ФИЛЬТРАЦИЯ: рейтинги и категории без JavaScript ================= */
+.css-filter-radio { position:absolute; opacity:0; width:1px; height:1px; overflow:hidden; }
+.rating-filters .rating-option { display:flex; flex-direction:column; align-items:center; justify-content:center; cursor:pointer; text-align:center; }
+.rating-filters input:checked + label { background:#f0eafb; border-color:#cbb9e6; color:#71569f; box-shadow:0 0 0 1px #ded2f3 inset; }
+.category-filter-list input:checked + label { background:#f0eafb; color:#7861a6; }
+.category-filter-item { display:block; cursor:pointer; }
+.price-range { width:100%; accent-color:#a18acb; margin-top:7px; }
+/* rating hiding: selected threshold hides cards below it */
+.layout:has(#rating4:checked) .master-card:not([data-rating^="4"]):not([data-rating^="5"]),
+.layout:has(#rating5:checked) .master-card:not([data-rating="5.0"]) { display:none; }
+/* category filters */
+.layout:has(#catManicure:checked) .master-card:not([data-category~="manicure"]),
+.layout:has(#catHair:checked) .master-card:not([data-category~="hair"]),
+.layout:has(#catColor:checked) .master-card:not([data-category~="color"]),
+.layout:has(#catBrows:checked) .master-card:not([data-category~="brows"]),
+.layout:has(#catLashes:checked) .master-card:not([data-category~="lashes"]),
+.layout:has(#catCosmetology:checked) .master-card:not([data-category~="cosmetology"]),
+.layout:has(#catMakeup:checked) .master-card:not([data-category~="makeup"]),
+.layout:has(#catMassage:checked) .master-card:not([data-category~="massage"]) { display:none; }
